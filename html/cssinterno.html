@@ -4,63 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Interno</title>
     <style>
-        /*------------------------------------------------------------------------*/
-        /*Tipo: Universal --> afecta al los section */
         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header div {
+            display: flex;
+            justify-content: center;
+        }
+
+        header img {
+            height: 200px;
+            margin-right: 20px;
+        }
+
+        header h1 {
+            color: rgb(2, 0, 100);
+            font-size: 36px;
             text-align: center;
         }
 
-        /*------------------------------------------------------------------------*/
-        /*Tipo: Elemento*/
-        h1 {
-            color: blueviolet;
-            font-size: 40px;
+        nav {
+            background-color: rgb(255, 136, 0);
+            padding: 10px;
+            display: flex;
+            align-items: center;
         }
 
-        h2 {
-            color: red;
-            background-color: cyan;
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
         }
 
-        h3 {
-            color: blue;
-            font-size: 20px;
+        nav li {
+            margin-right: 20px;
         }
 
-        p {
-            font-family: Arial, Helvetica, sans-serif;
+        nav a {
+            color: black;
         }
 
-        button {
-            color: white;
-            background-color: black;
-            border-radius: 10px;
+        article {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid black;
         }
 
-        /*Nota: al ser universal el text-aline solo se puso en el universal*/
+        article h2 {
+            color: navy;
+            text-align: left;
+        }
+
+        article p {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+        }
+
+        aside {
+            background-color: lightyellow;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        aside h3 {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-weight: bold;
+        }
+
+        aside ul {
+            list-style-type: square;
+        }
+
+        aside a {
+            color: rgb(0, 114, 143);
+        }
+
+        footer {
+            background-color: rgb(194, 134, 255);
+            text-align: center;
+            padding: 10px;
+        }
     </style>
 </head>
 
 <body>
     <header>
+        <div>
+            <img src="../img/universidad-central-del-ecuador-logo-C712012CF0-seeklogo.com.png" alt="Logo">
+        </div>
         <h1>Universidad Central del Ecuador</h1>
     </header>
-    <nav></nav>
-    <section> <!--El unierversal se aplica a todo el contenido del section -->
-        <h2>Facultad de Ciencias F&#237;sicas y Matem&#225;ticas</h2>
-        <h3>2 &#60; 3</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Nemo ducimus accusantium reiciendis inventore vitae, ab consequuntur facere quasi neque nostrum vel libero
-            error minus est.</p>
-        <button>Guardar</button>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Corrupti reprehenderit nihil itaque, natus dolores libero qui rerum. Adipisci fugit aliquam dicta eius
-            numquam quod labore.</p>
-        <button>Guardar</button>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <h2>Nuestra Historia</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum itaque alias iste aliquam saepe, exercitationem obcaecati aliquid repellendus optio dolorem temporibus, blanditiis placeat ducimus voluptates similique explicabo velit? Officia, ratione. Officiis unde nostrum sequi omnis aperiam? Error vitae adipisci nulla, commodi accusamus, soluta, hic earum blanditiis nam maxime libero optio?
+            </p>
+        </article>
+        <aside>
+            <h3>Facultades</h3>
+            <ul>
+                <li><a href="#">Arquitectura</a></li>
+                <li><a href="#">Medicina</a></li>
+                <li><a href="#">Ingenier&#237;a</a></li>
+            </ul>
+        </aside>
     </section>
-    <footer></footer>
+    <footer>
+        <p>&copy; 2023 UCE</p>
+    </footer>
 </body>
 
 </html>

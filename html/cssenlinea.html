@@ -1,32 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS en Linea </title>
 </head>
 
 <body>
     <header>
-        <h1 style="color: blueviolet; font-size: 40px; text-align: center;">Universidad Central del Ecuador</h1>
+        <div style="display: flex; justify-content: center;">
+            <img src="../img/universidad-central-del-ecuador-logo-C712012CF0-seeklogo.com.png" alt="Logo" style="height: 200px; margin-right: 20px;">
+        </div>
+        <h1 style="color: rgb(2, 0, 100); font-size: 36px; text-align: center;">Universidad Central del Ecuador</h1>
     </header>
-    <nav></nav>
+    <nav style="background-color: rgb(255, 136, 0); padding: 10px; display: flex; align-items: center;">
+     <ul style="list-style-type: none; display: flex; margin: 0; padding: 0;">
+            <li style="margin-right: 20px;"><a href="#" style="color: black;">Home</a></li>
+            <li style="margin-right: 20px;"><a href="#" style="color: black;">Nosotros</a></li>
+            <li style="margin-right: 20px;"><a href="#" style="color: black;">Contactos</a></li>
+        </ul>
+    </nav>
     <section>
-        <h2 style="color: red; background-color: yellow;  text-align: center;">Facultad de Ciencias F&#237;sicas y Matem&#225;ticas</h2>
-        <!--Declaracion en linea-->
-        <h3 style="color: blue; font-size: 20px; text-align: center;">2 &#60; 3</h3>
-        <!--Aqui en este momento esta quemado el tamaño de la letra, no es dinamico -->
-        <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Nemo ducimus accusantium reiciendis inventore vitae, ab consequuntur facere quasi neque nostrum vel libero
-            error minus est.</p>
-        <button style="color: white; background-color: black; border-radius: 10px;  text-align: center;">Guardar</button>
-        <p style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Corrupti reprehenderit nihil itaque, natus dolores libero qui rerum. Adipisci fugit aliquam dicta eius
-            numquam quod labore.</p>
-        <button style="color: white; background-color: black; border-radius: 10px;  text-align: center;">Guardar</button>
+        <article style="margin: 20px; padding: 10px; border: 1px solid black;">
+            <h2 style="color: navy; text-align: left;">Nuestra Historia</h2>
+            <p style="font-family: 'Times New Roman', Times, serif; text-align: justify;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum itaque alias iste aliquam saepe, exercitationem obcaecati aliquid repellendus optio dolorem temporibus, blanditiis placeat ducimus voluptates similique explicabo velit? Officia, ratione. Officiis unde nostrum sequi omnis aperiam? Error vitae adipisci nulla, commodi accusamus, soluta, hic earum blanditiis nam maxime libero optio? </p>
+        </article>
+        <aside style="background-color: lightyellow; padding: 10px; margin: 20px;">
+            <h3 style="color: red; text-align: center;">Facultades</h3>
+            <ul style="list-style-type: square;">
+                <li><a href="#" style="color: blue;">Arquitectura</a></li>
+                <li><a href="#" style="color: blue;">Medicina</a></li>
+                <li><a href="#" style="color: blue;">Ingenier&#237;a</a></li>
+            </ul>
+        </aside>
     </section>
-    <footer></footer>
+    <footer style="background-color: rebeccapurple; text-align: center; padding: 10px;">
+        <p>&copy; 2023 UCE</p>
+    </footer>
 </body>
-
-</html>

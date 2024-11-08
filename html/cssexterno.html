@@ -4,31 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!--Aqui se hace la referencia de los estilos (usamos la ruta relativa no absoluta )-->
-    <!--Nota 1: Todas las paginas web que van a usar el estilo externo se las vincula-->
-    <!--Nota 2: podemos poner mas de un estilo-->
-    <link rel="stylesheet" href="../css/estiloexterno.css"> <!--esta es una ruta no absoluta-->
+    <title>CSS Externo</title>
+    <link rel="stylesheet" href="../css/estiloexterno.css"> 
 </head>
 
 <body>
     <header>
+        <div>
+            <img src="../img/universidad-central-del-ecuador-logo-C712012CF0-seeklogo.com.png" alt="Logo">
+        </div>
         <h1>Universidad Central del Ecuador</h1>
     </header>
-    <nav></nav>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul>
+    </nav>
     <section>
-        <h2>Facultad de Ciencias F&#237;sicas y Matem&#225;ticas</h2>
-        <h3>2 &#60; 3</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Nemo ducimus accusantium reiciendis inventore vitae, ab consequuntur facere quasi neque nostrum vel libero
-            error minus est.</p>
-        <button>Guardar</button>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Corrupti reprehenderit nihil itaque, natus dolores libero qui rerum. Adipisci fugit aliquam dicta eius
-            numquam quod labore.</p>
-        <button>Guardar</button>
+        <article>
+            <h2>Nuestra Historia</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum itaque alias iste aliquam saepe, exercitationem obcaecati aliquid repellendus optio dolorem temporibus, blanditiis placeat ducimus voluptates similique explicabo velit? Officia, ratione. Officiis unde nostrum sequi omnis aperiam? Error vitae adipisci nulla, commodi accusamus, soluta, hic earum blanditiis nam maxime libero optio?
+            </p>
+        </article>
+        <aside>
+            <h3>Facultades</h3>
+            <ul>
+                <li><a href="#">Arquitectura</a></li>
+                <li><a href="#">Medicina</a></li>
+                <li><a href="#">Ingenier&#237;a</a></li>
+            </ul>
+        </aside>
     </section>
-    <footer></footer>
+    <footer>
+        <p>&copy; 2023 UCE</p>
+    </footer>
 </body>
 
 </html>
