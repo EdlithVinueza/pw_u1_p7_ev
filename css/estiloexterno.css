@@ -1,35 +1,87 @@
  /*------------------------------------------------------------------------*/
-        /*Tipo: Universal --> afecta al los section */
-        * {
-            text-align: center;
-        }
+ /*Selector Tipo: Universal --> 
+        Afecta al los section 
+        Es empleado para centrados generales
+        Nota: al ser universal el text-aline solo se puso en el universal
+        */
+ * {
+     text-align: center;
 
-        /*------------------------------------------------------------------------*/
-        /*Tipo: Elemento*/
-        h1 {
-            color: blueviolet;
-            font-size: 40px;
-        }
+ }
 
-        h2 {
-            color: red;
-            background-color: greenyellow;
-        }
+ /*------------------------------------------------------------------------*/
+ /*Selector Tipo: Elemento*/
+ h1 {
+     color: blueviolet;
+     font-size: 40px;
+ }
 
-        h3 {
-            color: blue;
-            font-size: 20px;
-        }
+ h2 {
+     color: red;
+     background-color: greenyellow;
+ }
 
-        p {
-            font-family: Arial, Helvetica, sans-serif;
-        }
+ h3 {
+     color: blue;
+     font-size: 20px;
+ }
 
-        button {
-            color: white;
-            background-color: black;
-            border-radius: 10px;
-        }
+ p {
+     font-family: Arial, Helvetica, sans-serif;
+ }
 
-        /*Nota: al ser universal el text-aline solo se puso en el universal*/
-   
+ button {
+     color: white;
+     background-color: black;
+     border-radius: 10px;
+ }
+
+ /*------------------------------------------------------------------------*/
+ /*Selector Tipo: Clase*/
+ .titulos {
+     color: green;
+     font-size: 30px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+
+ /*------------------------------------------------------------------------*/
+ /*Selector Tipo: ID*/
+
+ #id_pie_pagina_uce {
+     color: burlywood;
+     font-size: 30px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: blueviolet;
+ }
+
+ /*------------------------------------------------------------------------*/
+ /*Selector Tipo: Atributo*/
+ /*Selector de atributo de tipo src*/
+ /*
+    img[src ="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png"]{
+        width: 250px;
+        height: 300px;
+    }
+        */
+
+ /*Selector de atributo de tipo src que termine en .png*/
+ img[src*=".png"] {
+     width: 20px;
+     height: 30px;
+ }
+
+ input[type] {
+     background-color: cornflowerblue;
+ }
+
+ .titulos:hover {
+     color: chartreuse;
+     background-color: black;
+ }
+
+ /*------------------------------------------------------------------------*/
+ /*Combinacion de selectores*/
+ h1,h3,h5{
+    color: red;
+    background-color: yellow;
+ }
