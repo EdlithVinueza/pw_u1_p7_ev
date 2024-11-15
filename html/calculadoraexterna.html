@@ -4,28 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Declaraci&#243;n interna de JS</title>
+    <title>Declaraci&#243;n en externa de JS</title>
 
     <header>
-
-        <script>
-            /*Declaración interna de js*/
-            function cambiarTexto(idelemento, valor) {
-                document.getElementById(idelemento).innerText = valor
-            }
-
-            function cambiarColor(idelemento, color) {
-                document.getElementById(idelemento).style.color = color;
-            }
-
-            function cambiarTamanio(idelemento, tamanio) {
-                document.getElementById(idelemento).style.fontSize = tamanio;
-            }
-            function agregarElementos(idelemento, elementohtml) {
-                document.getElementById(idelemento).innerHTML = document.getElementById(idelemento).innerHTML + elementohtml
-            }
-
-        </script>
+        <!--Declaración externa de js-->
+        <script src="../js/jsexterno.js"> </script>
 
     </header>
 
@@ -38,7 +21,6 @@
     </nav>
 
     <section>
-
         <label id="label1" for="numero1">N&#250;mero 1</label>
         <input type="number" id="numero1">
         <label id="label2" for="numero2">N&#250;mero 2</label>
@@ -49,10 +31,9 @@
         <button onclick="cambiarTexto('label1','Valor modificado 1')">Cambiar Texto 1</button>
         <button onclick="cambiarTexto('label2','Valor modificado 2')">Cambiar Texto 2</button>
         <button onclick="agregarElementos('idmenu','<li>Calculadora 4</li>')">Agregar Elementos</button>
-
     </section>
-
-    <footer></footer>
+    <footer>
+    </footer>
 </head>
 
 <body>
