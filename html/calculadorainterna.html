@@ -5,58 +5,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Declaraci&#243;n interna de JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
 
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: rgb(179, 255, 0);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+        }
+
+        section {
+            text-align: center;
+            margin: 20px;
+        }
+
+        footer {
+            background-color: rgb(15, 129, 36);
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+
+        article {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        article h2 {
+            color: navy;
+            text-align: left;
+        }
+
+        article p {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+        }
+
+        aside {
+            background-color: lightyellow;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        aside h3 {
+            color: red;
+            text-align: center;
+        }
+
+        aside ul {
+            list-style-type: square;
+        }
+
+        aside a {
+            color: blue;
+        }
+    </style>
+    <script>
+        function cambiarColorLabel1() {
+            document.getElementById('label1').style.color = 'yellow';
+        }
+
+        function cambiarTamanoLabel1() {
+            document.getElementById('label1').style.fontSize = '40px';
+        }
+
+        function cambiarTextoLabel1() {
+            document.getElementById('label1').innerText = 'Nuevo Valor';
+        }
+
+        function agregarElemento() {
+            document.getElementById('idmenu').innerHTML += '<li><a href="#" style="color: black;">Nueva Calculadora</a></li>';
+        }
+
+        function cambiarFondoInput1() {
+            document.getElementById('numero1').style.backgroundColor = 'lightblue';
+        }
+
+        function cambiarFondoInput2() {
+            document.getElementById('numero2').style.backgroundColor = 'lightgreen';
+        }
+
+        function cambiarPesoTextoLabel2() {
+            document.getElementById('label2').style.fontWeight = 'bold';
+        }
+
+        function cambiarEstiloTextoLabel2() {
+            document.getElementById('label2').style.fontStyle = 'italic';
+        }
+
+        function cambiarColorCalculadora() {
+            document.getElementById('calculadora').style.color = 'green';
+        }
+
+        function cambiarTamanoCalculadora() {
+            document.getElementById('calculadora').style.fontSize = '30px';
+        }
+    </script>
+</head>
+
+<body>
     <header>
-
-        <script>
-            /*Declaración interna de js*/
-            function cambiarTexto(idelemento, valor) {
-                document.getElementById(idelemento).innerText = valor
-            }
-
-            function cambiarColor(idelemento, color) {
-                document.getElementById(idelemento).style.color = color;
-            }
-
-            function cambiarTamanio(idelemento, tamanio) {
-                document.getElementById(idelemento).style.fontSize = tamanio;
-            }
-            function agregarElementos(idelemento, elementohtml) {
-                document.getElementById(idelemento).innerHTML = document.getElementById(idelemento).innerHTML + elementohtml
-            }
-
-        </script>
-
+        <div style="display: flex; justify-content: center;">
+            <img src="../img/universidad-central-del-ecuador-logo-C712012CF0-seeklogo.com.png" alt="Logo" style="height: 200px; margin-right: 20px;">
+        </div>
+        <h1 style="color: rgb(2, 0, 100); font-size: 36px; text-align: center;">Universidad Central del Ecuador</h1>
     </header>
-
     <nav>
         <ul id="idmenu">
-            <li>Calculadora 1</li>
-            <li>Calculadora 2</li>
-            <li>Calculadora 3</li>
+            <li style="margin-right: 20px;"><a href="#" style="color: black;">Calculadora 1</a></li>
+            <li style="margin-right: 20px;"><a href="#" style="color: black;">Calculadora 2</a></li>
+            <li style="margin-right: 20px;"><a href="#" style="color: black;">Calculadora 3</a></li>
         </ul>
     </nav>
-
     <section>
-
+        <article>
+            <h2 id="calculadora">Mi Calculadora</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum itaque alias iste aliquam saepe, exercitationem obcaecati aliquid repellendus optio dolorem temporibus, blanditiis placeat ducimus voluptates similique explicabo velit? Officia, ratione. Officiis unde nostrum sequi omnis aperiam? Error vitae adipisci nulla, commodi accusamus, soluta, hic earum blanditiis nam maxime libero optio?
+            </p>
+            <button onclick="cambiarColorCalculadora()">Cambiar Color Texto</button>
+            <button onclick="cambiarTamanoCalculadora()">Cambiar Tama&#241;o Texto</button>
+        </article>
+    </section>
+    <section>
+        <h2 id="ingresaNumeros" style="color: navy; text-align: left;">Ingresa N&#250;meros</h2>
         <label id="label1" for="numero1">N&#250;mero 1</label>
         <input type="number" id="numero1">
         <label id="label2" for="numero2">N&#250;mero 2</label>
         <input type="number" id="numero2">
         <br>
-        <button onclick="cambiarColor('label1','blue')">Cambiar Color</button>
-        <button onclick="cambiarTamanio('label2','50px')">Cambiar Tama&#241;o</button>
-        <button onclick="cambiarTexto('label1','Valor modificado 1')">Cambiar Texto 1</button>
-        <button onclick="cambiarTexto('label2','Valor modificado 2')">Cambiar Texto 2</button>
-        <button onclick="agregarElementos('idmenu','<li>Calculadora 4</li>')">Agregar Elementos</button>
-
+        <!--Declaración en linea de funciones js-->
+        <button onclick="cambiarColorLabel1()">Cambiar Color</button>
+        <button onclick="cambiarTamanoLabel1()">Cambiar Tama&#241;o</button>
+        <button onclick="cambiarTextoLabel1()">Cambiar Texto</button>
+        <button onclick="agregarElemento()">Agregar Elementos</button>
+        <br><br>
+        <button onclick="cambiarFondoInput1()">Cambiar Fondo Input 1</button>
+        <button onclick="cambiarFondoInput2()">Cambiar Fondo Input 2</button>
+        <button onclick="cambiarPesoTextoLabel2()">Cambiar Peso Texto</button>
+        <button onclick="cambiarEstiloTextoLabel2()">Cambiar Estilo Texto</button>
     </section>
-
-    <footer></footer>
-</head>
-
-<body>
-
+    <footer>
+        <p>&copy; 2023 UCE</p>
+    </footer>
 </body>
 
 </html>
