@@ -1,38 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--Declaración en linea de JS-->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Declaraci&#243;n en linea de JS</title>
-</head>
-
-<body>
     <header>
-        <div style="display: flex; justify-content: center;">
-            <img src="../img/universidad-central-del-ecuador-logo-C712012CF0-seeklogo.com.png" alt="Logo" style="height: 200px; margin-right: 20px;">
-        </div>
-        <h1 style="color: rgb(2, 0, 100); font-size: 36px; text-align: center;">Universidad Central del Ecuador</h1>
+
     </header>
-    <nav style="background-color: rgb(255, 136, 0); padding: 10px; display: flex; align-items: center;">
-        <ul id="idmenu" style="list-style-type: none; display: flex; margin: 0; padding: 0;">
-            <li style="margin-right: 20px;"><a href="#" style="color: black;">Calculadora 1</a></li>
-            <li style="margin-right: 20px;"><a href="#" style="color: black;">Calculadora 2</a></li>
-            <li style="margin-right: 20px;"><a href="#" style="color: black;">Calculadora 3</a></li>
+    <nav></nav>
+    <ul id="idmenu">
+        <li>Calculadora 1</li>
+        <li>Calculadora 2</li>
+        <li>Calculadora 3</li>
+    </ul>
+    <nav>
+        <ul id="idmenu">
+            <li>Calculadora 1</li>
+            <li>Calculadora 2</li>
+            <li>Calculadora 3</li>
         </ul>
     </nav>
     <section>
-        <article style="margin: 20px; padding: 10px; border: 1px solid black;">
-            <h2 id="calculadora" style="color: navy; text-align: left;">Mi Calculadora</h2>
-            <p style="font-family: 'Times New Roman', Times, serif; text-align: justify;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum itaque alias iste aliquam saepe, exercitationem obcaecati aliquid repellendus optio dolorem temporibus, blanditiis placeat ducimus voluptates similique explicabo velit? Officia, ratione. Officiis unde nostrum sequi omnis aperiam? Error vitae adipisci nulla, commodi accusamus, soluta, hic earum blanditiis nam maxime libero optio?
-            </p>
-            <button onclick="document.getElementById('calculadora').style.color = 'green'">Cambiar Color Texto</button>
-            <button onclick="document.getElementById('calculadora').style.fontSize = '30px'">Cambiar Tama&#241;o Texto</button>
-        </article>
-    </section>
-    <section>
-        <h2 id="ingresaNumeros" style="color: navy; text-align: left;">Ingresa N&#250;meros</h2>
         <label id="label1" for="numero1">N&#250;mero 1</label>
         <input type="number" id="numero1">
         <label id="label2" for="numero2">N&#250;mero 2</label>
@@ -40,18 +30,19 @@
         <br>
         <!--Declaración en linea de funciones js-->
         <button onclick="document.getElementById('label1').style.color = 'yellow'">Cambiar Color</button>
+        <button onclick="document.getElementById('label1').style.fontSize = '40px'">Cambiar Tema&#241;o</button>
         <button onclick="document.getElementById('label1').style.fontSize = '40px'">Cambiar Tama&#241;o</button>
         <button onclick="document.getElementById('label1').innerText='Nuevo Valor'">Cambiar Texto</button>
-        <button onclick="document.getElementById('idmenu').innerHTML=document.getElementById('idmenu').innerHTML+'<li>Nueva Calculadora</li>'">Agregar Elementos</button>
-        <br><br>
-        <button onclick="document.getElementById('numero1').style.backgroundColor = 'lightblue'">Cambiar Fondo Input 1</button>
-        <button onclick="document.getElementById('numero2').style.backgroundColor = 'lightgreen'">Cambiar Fondo Input 2</button>
-        <button onclick="document.getElementById('label2').style.fontWeight = 'bold'">Cambiar Peso Texto</button>
-        <button onclick="document.getElementById('label2').style.fontStyle = 'italic'">Cambiar Estilo Texto</button>
+        <button
+            onclick="document.getElementById('idmenu').innerHTML=document.getElementById('idmenu').innerHTML+'<li>Calculadora 4</li>'">Agregar
+            Elementos</button>
     </section>
-    <footer style="background-color: rebeccapurple; text-align: center; padding: 10px;">
-        <p>&copy; 2023 UCE</p>
-    </footer>
-</body>
+    <footer>
 
-</html>
+    </footer>
+    <footer></footer>
+</head>
+
+<body>
+
+</body>

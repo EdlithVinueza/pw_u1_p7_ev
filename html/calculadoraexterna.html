@@ -1,68 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--Declaración en externa de JS-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Declaraci&#243;n externa de JS</title>
-    <!--CSS externo-->
-    <link rel="stylesheet" href="../css/estiloexterno.css">
-    <!--Declaración externa de js-->
-    <script src="../js/jsexterno.js"></script>
-</head>
-
-<body>
+    <title>Declaraci&#243;n en externa de JS</title>
     <header>
-        <div style="display: flex; justify-content: center;">
-            <img src="../img/universidad-central-del-ecuador-logo-C712012CF0-seeklogo.com.png" alt="Logo"
-                style="height: 200px; margin-right: 20px;">
-        </div>
-        <h1 style="color: rgb(2, 0, 100); font-size: 36px; text-align: center;">Universidad Central del Ecuador</h1>
+        <!--Declaración externa de js-->
+        <script src="../js/jsexterno.js"> </script>
     </header>
     <nav>
         <ul id="idmenu">
-            <li style="margin-right: 20px;"><a href="#" style="color: black;">Calculadora 1</a></li>
-            <li style="margin-right: 20px;"><a href="#" style="color: black;">Calculadora 2</a></li>
-            <li style="margin-right: 20px;"><a href="#" style="color: black;">Calculadora 3</a></li>
+            <li>Calculadora 1</li>
+            <li>Calculadora 2</li>
+            <li>Calculadora 3</li>
         </ul>
     </nav>
     <section>
-        <article>
-            <h2 id="calculadora">Mi Calculadora</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum itaque alias iste aliquam saepe,
-                exercitationem obcaecati aliquid repellendus optio dolorem temporibus, blanditiis placeat ducimus
-                voluptates similique explicabo velit? Officia, ratione. Officiis unde nostrum sequi omnis aperiam? Error
-                vitae adipisci nulla, commodi accusamus, soluta, hic earum blanditiis nam maxime libero optio?
-            </p>
-            <button onclick="cambiarColorCalculadora('green')">Cambiar Color Texto</button>
-            <button onclick="cambiarTamanoCalculadora('30px')">Cambiar Tama&#241;o Texto</button>
-        </article>
-    </section>
-    <section>
-        <h2 id="ingresaNumeros" style="color: rgb(0, 114, 143)">Ingresa N&#250;meros</h2>
-        <button onclick="cambiarColorH2('lightgreen')">Cambiar Color Texto</button>
-        <button onclick="cambiarTamanoH2('30px')">Cambiar Tama&#241;o Texto</button>
-        <br><br>
         <label id="label1" for="numero1">N&#250;mero 1</label>
         <input type="number" id="numero1">
         <label id="label2" for="numero2">N&#250;mero 2</label>
         <input type="number" id="numero2">
         <br>
-        <!--Declaración en linea de funciones js-->
-        <button onclick="cambiarColorLabel1('cyan')">Cambiar Color</button>
-        <button onclick="cambiarTamanoLabel1('40px')">Cambiar Tama&#241;o</button>
-        <button onclick="cambiarTextoLabel1('Nuevo Valor')">Cambiar Texto</button>
-        <button onclick="agregarElemento('Nueva Calculadora')">Agregar Elementos</button>
-        <br><br>
-        <button onclick="cambiarFondoInput1('lightblue')">Cambiar Fondo Input 1</button>
-        <button onclick="cambiarFondoInput2('lightgreen')">Cambiar Fondo Input 2</button>
-        <button onclick="cambiarPesoTextoLabel2('bold')">Cambiar Peso Texto</button>
-        <button onclick="cambiarEstiloTextoLabel2('italic')">Cambiar Estilo Texto</button>
+        <button onclick="cambiarColor('label1','blue')">Cambiar Color</button>
+        <button onclick="cambiarTamanio('label2','50px')">Cambiar Tama&#241;o</button>
+        <button onclick="cambiarTexto('label1','Valor modificado 1')">Cambiar Texto 1</button>
+        <button onclick="cambiarTexto('label2','Valor modificado 2')">Cambiar Texto 2</button>
+        <button onclick="agregarElementos('idmenu','<li>Calculadora 4</li>')">Agregar Elementos</button>
     </section>
     <footer>
-        <p>&copy; 2023 UCE</p>
     </footer>
+</head>
+<body>
 </body>
-
 </html>
