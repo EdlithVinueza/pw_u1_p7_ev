@@ -104,12 +104,12 @@ const conceptosJS = () => {
 
     //Declaracion de atributos pero como objetos
     const miProfesor = {
-        nombre:"Daniel",
-        apellido:"Torres",
-        edad:null,
-        direccion:{
+        nombre: "Daniel",
+        apellido: "Torres",
+        edad: null,
+        direccion: {
             calle: "Av. La Prensa",
-            casa : "1028",
+            casa: "1028",
             barrio: "La Grandeza"
         }
     };
@@ -125,14 +125,136 @@ const conceptosJS = () => {
     console.log(miProfesor.edad);
     console.log(miProfesor.estatura);
 
-    if (miProfesor.edad === miProfesor.estatura){
+    if (miProfesor.edad === miProfesor.estatura) {
         console.log('Son iguales');
-    } else{
+    } else {
         console.log('Estos no son lo mismo');
     };
 
+    //Arreglo de objetos
+    const est1 = {
+        nombre: "Edlith",
+        apellido: "Vinueza",
+        edad: 24
+    };
+
+    const est2 = {
+        nombre: "Daniel",
+        apellido: "Torres",
+        edad: 25
+    };
+
+    const est3 = {
+        nombre: "Luis",
+        apellido: "Carrillo",
+        edad: 26
+    };
+
+    const arregloestudiantes = [est1, est2, est3];
+
+    console.log(arregloestudiantes);
+    console.log(arregloestudiantes[1]);
+    console.log(arregloestudiantes[1].nombre);
+
+    const arregloestudiantes2 = [{ nombre: "Carlos", apellido: "Tobar", edad: 35 },
+    { nombre: "Ana", apellido: "Castillo", edad: 39 },
+    { nombre: "Andrea", apellido: "Andrade", edad: 31 },
+    { nombre: "Alejandra", apellido: "Zambrano", edad: 29 }];
+
+    console.log(arregloestudiantes2);
+
+    console.table(arregloestudiantes2);
+
+    //Uso de pop para obtener y eliminar el ultimo elemento del array
+    const estudiante = arregloestudiantes2.pop();
+
+    console.log(estudiante);
+
+    console.table(arregloestudiantes2);
+
+    //Destructuracion de arreglos
+    const colores = ['Amarillo', 'Azul', 'Verde', 'Rojo', 'Rosado'];
+
+    const [c1, c2, c3, c4, c5] = colores;
+
+    const [m1, m2, m3, m4, m5, m6, m7, m8] = ['enero', 'febrero', 'marzo', 'abril', 'mayo'];
+
+    console.log(m1);
+    console.log(m2);
+    console.log(m5);
+    console.log(m8);
+
+    //Para no aceder a todo, usando comas
+
+    const [, mes2, , , mes5] = ['enero', 'febrero', 'marzo', 'abril', 'mayo'];
+
+    console.log(mes2);
+    console.log(mes5);
+
+    //Destructuracion de Objetos
+
+    console.log('Desestructuracion de Objetos');
+
+    const automovil = {
+        marca: 'Toyota',
+        modelo: 'Pruis',
+        anio: 2024,
+        color: 'Plateado'
+    };
+
+    /*
+    const {marca,modelo,anio, color} = automovil;
+    console.log(marca);
+    console.log(modelo);
+    console.log(anio);
+    console.log(color);
+    */
+
+    //const desestructuracion = (automovil) => {};
+
+    const desestructuracion = ({ modelo, anio, color, marca }) => {
+        console.log('Entro al metodo de desestrutacion');
+        console.log(marca);
+        console.log(modelo);
+        console.log(color);
+        console.log(color);
+    };
+
+    desestructuracion(automovil);
+
+    const { nombreP, estatura, raza } = { nombreP: 'Perro', raza: 'pastor', estatura: 120 }
+    console.log(nombreP);
+    console.log(estatura);
+    console.log(raza);
+
+    //declaren un objeto con un atributo complejo (con un atributo de tipo objeto)
+    // y vamos a desestructurar en especial el atributo de tipo objeto
+
+    const universidad = {
+        nombre: 'UCE',
+        estudiantes: 10000000,
+        rector: {
+            nombreR: 'Nombre1',
+            apellido: 'Apellido1'
+        }
+    };
 
 
-
+    /*
+       //extraer informacion de un objeto dentro de otro objeto
+       const {estudiantes, rector} = universidad; 
+       console.log(estudiantes);
+       console.log(rector);
+      
+       //extraer informacion del rector de un objeto en dos pasos
+       const {nombreR} = rector;
+   
+       console.log(nombreR);
+   
+       */
+    //extraer en una linea 
+    const { estudiantes, rector: { nombreR, apellido } } = universidad;
+    console.log(nombreR);
+    console.log(apellido);
 
 } 
