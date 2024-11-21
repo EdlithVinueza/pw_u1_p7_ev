@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 275px;
+}
+
+.calculadora{
+    /*Establecer que el contenido se va a distribuir visualmente en una cuadricula*/
+    display: grid; 
+    grid-template-columns: 75px 75px 75px 75px;/*Tamaño de las columnas, en este caso 3*/
+    grid-template-rows: 75px 75px 75px 75px 75px 75px;
+    padding: 15px; /*Un solo valor en los 4 lados*/
+    border: 2px solid rgb(12, 80, 57);
+    border-radius: 35px;
+    background-color: rgba(133, 224, 224);
+    box-shadow: 15px 15px 15px rgb(21, 85, 64);
+}
+
+.display{
+    grid-column: span 4;
+    border: 2px solid rgb(5, 109, 74);
+    border-radius: 5px;
+    background-color: rgb(196, 236, 236);
+    text-align: right;
+    font-size: 35px;
+    padding: 10px;
+    color: #000;
+    padding-right: 5px;
+    margin-bottom: 10px;
+}
+
+#teclac{
+    grid-column: span 2; 
+    background-color: rgb(39, 216, 201);
+    font-size: 20px;
+}
+
+#tecla0{
+    grid-column: span 2;
+    background-color: rgb(69, 191, 228);
+}
+
