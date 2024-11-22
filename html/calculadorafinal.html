@@ -6,30 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Final</title>
     <link rel="stylesheet" href="../css/estilos.css">
-    <script src="../js/calculadora.js"> </script>
-
+    <script src="../js/calculadora.js" defer></script>
 </head>
 
 <body>
     <header></header>
     <nav></nav>
     <section>
-        <!--Elemto dis
-        -div se usa para agrupar elementos, usamos el elemento div, incluso para cosas visuales o no visuales
-        -Permite dar contornos dentro de la página web
-        -->
-        <div class="container"> <!--Este grupo general de la calculadora -->
+        <div class="container">
             <div class="calculadora">
-                <div id="id-display" class="display">
-                    1+2
-                </div>
-                <button id="teclac">C</button>
-                <button>&larr;</button>
+                <div id="id-display" class="display"></div>
+                <button id="teclac" onclick="limpiar()">C</button>
+                <button onclick="recibirValor('')">&larr;</button>
                 <button onclick="evaluarOperacion('%')">%</button>
                 <button onclick="recibirValor('7')">7</button>
                 <button onclick="recibirValor('8')">8</button>
                 <button onclick="recibirValor('9')">9</button>
-                <button onclick="evaluarOperacion('x')">x</button>
+                <button onclick="evaluarOperacion('*')">x</button>
                 <button onclick="recibirValor('4')">4</button>
                 <button onclick="recibirValor('5')">5</button>
                 <button onclick="recibirValor('6')">6</button>
@@ -40,10 +33,9 @@
                 <button onclick="evaluarOperacion('+')">+</button>
                 <button id="tecla0" onclick="recibirValor('0')">0</button>
                 <button onclick="recibirValor('.')">.</button>
-                <button onclick="igual('=')">=</button>
+                <button onclick="igual()">=</button>
             </div>
-            <div class="propagandas">
-            </div>
+            <div class="propagandas"></div>
         </div>
     </section>
     <footer></footer>

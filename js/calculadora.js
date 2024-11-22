@@ -1,49 +1,52 @@
-var num1 =0;
-var num2 =0;
+var num1 = null;
+var num2 = null;
+var operacion = null;
 
 /*Para obtener el valor ingresado  */
-function setearValor(valor){
-  
-    let valorActual = document.getElementById('id-display').innerText 
-    console.log(valorActual);
+function setearValor(valor) {
     document.getElementById('id-display').innerText = valor;
-};
+}
 
-function setearValorConcatenado(valor){
+function setearValorConcatenado(valor) {
     let valorActual = document.getElementById('id-display').innerText;
-    console.log(valorActual);
     document.getElementById('id-display').innerText = valorActual + valor;
-};
+}
 
-function recibirValor(valor){
-    setearValor(valor);
-    console.log(valor);
-    if (num1 === null){
-        num1 = valor
-        setearValor(valor)
-    }
-    else{
-        num2 = valor;
+function recibirValor(valor) {
+    if (num1 === null) {
+        num1 = parseFloat(valor);
+        setearValor(valor);
+    } else {
+        num2 = parseFloat(valor);
         setearValorConcatenado(valor);
     }
 }
 
-function evaluarOperacion(op){
-    opeperacion = op;
-};
+function evaluarOperacion(op) {
+    operacion = op;
+    setearValorConcatenado(op);
+}
 
-function igual(){
+function igual() {
     let valorFinal;
-    if (operacion === '+'){
+    if (operacion === '+') {
         valorFinal = num1 + num2;
-    }
-    else if (operacion === '-'){
+    } else if (operacion === '-') {
         valorFinal = num1 - num2;
-    }
-    else if (operacion === '*'){
+    } else if (operacion === '*') {
         valorFinal = num1 * num2;
-    }
-    else if (operacion === '/'){
+    } else if (operacion === '/') {
         valorFinal = num1 / num2;
     }
-};
+    setearValor(valorFinal);
+    num1 = valorFinal;
+    num2 = null;
+    operacion = null;
+}
+
+function limpiar() {
+    num1 = null;
+    num2 = null;
+    operacion = null;
+    setearValor('');
+}
