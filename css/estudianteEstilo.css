@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+body{
+    background-color: #d6dbdf;
+}
+
+/*Para que p sea considerado como un label y poder visualizarlo*/
+p:before{
+    content: attr(type);
+    display: block; /*Predisponer como bloques independientes*/
+    margin: 3px;
+    font-size: 18px;
+    color: #154360;
+}
+
+input{
+    width: 290px; /*Ampliar ancho*/
+    border: none;
+    border-bottom: 2px solid #154360; /*Color de la línea inferior*/
+    background : none; /*Fondo transparente*/
+}
+
+input:focus{
+    outline: none; /*Quitar el borde al seleccionar*/
+    border-bottom: 2px solid #328fc9; /*Color de la línea inferior*/
+}
+
+h2{
+    margin: 10px 2px; /*Margen superior e inferior*/
+    width: 180px; /*Ancho*/
+    color: #154360;
+    font-size: 30px;
+    border-bottom: 2px dotted #154360; /*Color de la línea inferior*/
+}
+
+form{
+    width: 300px; /*Ancho*/
+    height: 450px; /*Alto*/
+    background-color: #e6e6e6;
+    border-radius: 10px; /*Borde redondeado*/
+    border-color: #154360; /*Color del borde*/
+    padding: 30px 40px; /*Margen interno*/
+    padding-top: 15px; /*Margen superior*/
+    padding-left: 45px; /*Margen izquierdo*/
+    box-shadow: 15px  15px 15px #15436093; /*Sombra*/
+
+}
