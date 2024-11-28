@@ -47,5 +47,21 @@ form{
     padding-top: 15px; /*Margen superior*/
     padding-left: 45px; /*Margen izquierdo*/
     box-shadow: 15px  15px 15px #15436093; /*Sombra*/
+}
 
+button{
+    background: #154360; /*Color de fondo*/
+    color: white; /*Color de la letra*/
+    border: 2px solid #819aaa; /*Quitar borde*/
+    padding: 10px 20px; /*Margen interno*/
+    border-radius: 5px; /*Borde redondeado*/
+    width: 110px; /*Ancho*/
+    height: 45px; /*Alto*/
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.copia-container{
+    display: flex; 
+    justify-content: center;
 }
